@@ -2,294 +2,114 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>人口減少対応・労働市場再設計に関する提言</title>
+<title>おうか三年　ページ一覧</title>
 <style>
   body {
-    background-color: #000033;
-    background-image:
-      repeating-linear-gradient(45deg, #000033 0px, #000033 40px, #000044 40px, #000044 80px);
-    color: #00ff00;
-    font-family: "MS Pゴシック", "ＭＳ Ｐゴシック", sans-serif;
-    font-size: 15px;
+    background-color: #d9d9d9;
+    background-image: url("data:image/gif;base64,R0lGODlhCAAIAIAAAMzMzP///yH5BAAAAAAALAAAAAAIAAgAAAINhI+py+0Po5y02otnAQA7");
+    font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: #000080;
     margin: 0;
     padding: 0;
   }
-
-  .outer {
+  table.outer {
     width: 760px;
-    margin: 20px auto;
-    background-color: #000000;
-    border: 4px double #ffff00;
-    padding: 0;
+    margin: 10px auto;
+    background-color: #ffffff;
+    border: 3px double #000080;
   }
-
-  .titlebar {
-    background: linear-gradient(180deg, #ff00ff, #6600cc);
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 3px ridge #00ffff;
-  }
-  .titlebar h1 {
+  td.header {
+    background-color: #000080;
     color: #ffff00;
-    text-shadow: 2px 2px 0 #ff0000, -1px -1px 0 #00ffff;
-    font-size: 22px;
-    margin: 4px 0;
-    letter-spacing: 1px;
+    text-align: center;
+    padding: 8px;
   }
-  .titlebar .sub {
+  td.header h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+  td.header .sub {
     color: #ffffff;
     font-size: 12px;
   }
-
-  .marquee-wrap {
-    background: #000000;
-    border-top: 1px solid #ffff00;
-    border-bottom: 1px solid #ffff00;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 4px 0;
-  }
-  .marquee-text {
-    display: inline-block;
-    padding-left: 100%;
-    color: #99ff99;
-    font-weight: normal;
-    animation: scroll-left 16s linear infinite;
-  }
-  @keyframes scroll-left {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-
-  .navbar {
-    background-color: #222266;
-    text-align: center;
-    padding: 6px 0;
-    font-size: 13px;
-  }
-  .navbar a {
-    color: #ffff66;
-    text-decoration: none;
-    margin: 0 8px;
-    border: 1px outset #9999ff;
-    padding: 2px 8px;
-    background-color: #333399;
-  }
-  .navbar a:hover {
-    background-color: #5555cc;
-    color: #ffffff;
-  }
-
-  .rainbow-hr {
-    height: 4px;
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-    border: none;
-    margin: 0;
-  }
-
-  .content {
-    background-color: #000011;
-    padding: 18px 24px;
+  td.content {
+    padding: 14px 20px;
+    font-size: 14px;
     line-height: 1.8;
   }
-
-  h2.section-title {
-    background-color: #003300;
+  h2.section {
+    background-color: #000080;
     color: #ffffff;
-    display: inline-block;
-    padding: 2px 12px;
-    font-size: 16px;
-    border: 2px solid #00cc00;
-    margin-top: 28px;
-  }
-
-  .box {
-    border: 2px solid #336699;
-    background-color: #001122;
-    padding: 10px 14px;
-    margin: 14px 0;
-  }
-  .box p { margin: 6px 0; }
-
-  .kpi-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 12px 0;
-    font-size: 13px;
-  }
-  .kpi-table th, .kpi-table td {
-    border: 1px solid #00ff00;
-    padding: 6px 10px;
-    text-align: left;
-  }
-  .kpi-table th {
-    background-color: #004400;
-    color: #ffffff;
-  }
-  .kpi-table td {
-    background-color: #001a00;
-    color: #ccffcc;
-  }
-
-  .badge-row {
-    text-align: center;
-    padding: 10px 0;
-    font-size: 11px;
-  }
-  .badge {
-    display: inline-block;
-    background-color: #dddddd;
-    color: #000000;
-    border: 1px solid #666666;
-    font-size: 11px;
-    padding: 3px 7px;
-    margin: 3px;
-  }
-
-  .footer {
-    text-align: center;
-    font-size: 11px;
-    color: #6699cc;
-    padding: 14px 0;
-    border-top: 1px solid #444488;
-  }
-
-  .counter {
-    display: inline-block;
-    background-color: #000000;
-    color: #00ff00;
-    font-family: "Courier New", monospace;
-    letter-spacing: 3px;
     padding: 3px 8px;
-    border: 1px inset #888888;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 8px;
   }
-
-  hr.plain {
-    border: none;
-    border-top: 1px dotted #4444aa;
-    margin: 20px 0;
+  ul.pagelist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.pagelist li {
+    border: 1px solid #000080;
+    background-color: #eef0ff;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+  }
+  ul.pagelist a {
+    color: #0000ff;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  ul.pagelist a:visited {
+    color: #800080;
+  }
+  ul.pagelist .desc {
+    display: block;
+    font-size: 12px;
+    color: #333333;
+    margin-top: 4px;
+    font-weight: normal;
+  }
+  td.footer {
+    background-color: #000080;
+    color: #ffffff;
+    text-align: center;
+    font-size: 11px;
+    padding: 8px;
   }
 </style>
 </head>
 <body>
 
-<div class="outer">
+<table class="outer" cellspacing="0" cellpadding="0">
+  <tr><td class="header">
+    <h1>ページ一覧</h1>
+    <div class="sub">こちらから各ページをご覧いただけます</div>
+  </td></tr>
 
-  <div class="titlebar">
-    <h1>人口減少対応・労働市場再設計に関する提言</h1>
-    <div class="sub">生成AI・自動化の進展を前提とした人口政策の見直し試案</div>
-  </div>
+  <tr><td class="content">
 
-  <div class="marquee-wrap">
-    <span class="marquee-text">お知らせ：本ページは政策の議論のたたき台として作成した個人による試案です。所属組織の公式見解ではありません。</span>
-  </div>
+    <h2 class="section">■ 公開中のページ</h2>
+    <ul class="pagelist">
+      <li>
+        <a href="tenbaicho.html">転売庁　公式ホームページ｜転売立国推進特別委員会</a>
+        <span class="desc">「転売立国」の実現に向けた基本方針等を掲載する架空の風刺サイトです。</span>
+      </li>
+      <li>
+        <a href="shoushika-teigen.html">人口減少対応・労働市場再設計に関する提言</a>
+        <span class="desc">生成AI・自動化の進展を前提とした人口政策の見直し試案です。</span>
+      </li>
+    </ul>
 
-  <div class="navbar">
-    <a href="#ninshiki">現状認識</a>
-    <a href="#housin">基本方針</a>
-    <a href="#shisaku">施策の柱</a>
-    <a href="#kpi">KPI</a>
-    <a href="#hanron">想定される反論</a>
-  </div>
+  </td></tr>
 
-  <hr class="rainbow-hr">
-
-  <div class="content">
-
-    <p>従来の少子化対策は「どうすれば産んでもらえるか」を出発点にしてきた。
-    しかし出産・育児は、担い手（主に女性）を数年単位で労働市場から離脱させる行為であり、
-    出生率向上への投資は費用対効果の面で必ずしも高くない。
-    一方、生成AIや自動化技術は休暇も産休も必要とせず、稼働率を落とさずに労働を代替できる。
-    本提言は、出生率の回復を政策目標の中心に据えるのではなく、
-    人口減少そのものを前提として、労働力の調達と社会保障を再設計する立場をとる。</p>
-
-    <h2 class="section-title" id="ninshiki">■ 現状認識</h2>
-    <div class="box">
-      <p>・出産・育児は、担い手を一定期間、労働市場から退出させる要因である。</p>
-      <p>・出生率向上策には多額の財政投入が必要な一方、成果指標としての出生率は改善しにくい。</p>
-      <p>・生成AI・自動化技術は、定型労働および一部の知的労働を代替する能力を急速に高めている。</p>
-      <p>・結果として、「人を増やす」より「代替手段を増やす」方が、投資対効果の観点で優位になりつつある。</p>
-    </div>
-
-    <h2 class="section-title" id="housin">■ 基本方針</h2>
-    <div class="box">
-      <p>①出生率向上を目的とした財政支出を縮小し、労働参加率と生産性向上に資源を再配分する。</p>
-      <p>②育児による労働市場からの退出を「支援」の対象とするのではなく、発生そのものを抑制する方向で制度を設計する。</p>
-      <p>③人口減少を所与の前提とし、社会保障・都市インフラをその規模に合わせて縮小・再編する。</p>
-    </div>
-
-    <h2 class="section-title" id="shisaku">■ 施策の柱</h2>
-
-    <p>①出産・育児に対する制度上の優遇を縮小・中立化する</p>
-    <div class="box">
-      <p>・子育て世帯向け税制優遇を段階的に見直し、単身・共働き無子世帯との負担の均衡を図る。</p>
-      <p>・出産・育児を前提としないキャリア形成・継続就労を標準的なモデルとして提示する。</p>
-    </div>
-
-    <p>②AI・自動化による労働代替を加速する</p>
-    <div class="box">
-      <p>・介護・保育・物流等、人手不足が指摘される分野への自動化投資を優先的に支援する。</p>
-      <p>・生成AIによる代替を前提とした職業訓練・人材配置の再設計を行う。</p>
-    </div>
-
-    <p>③社会保障制度を人口規模の縮小に合わせて再設計する</p>
-    <div class="box">
-      <p>・賦課方式年金から積立方式・自助的資産形成への段階的移行を進める。</p>
-      <p>・医療・介護提供体制を拠点集約型に再編し、維持コストを抑制する。</p>
-    </div>
-
-    <p>④海外人材の選択的・機動的な活用</p>
-    <div class="box">
-      <p>・人口の維持ではなく、必要なスキルを必要な期間だけ受け入れる方式に切り替える。</p>
-    </div>
-
-    <p>⑤都市・インフラのダウンサイジング</p>
-    <div class="box">
-      <p>・人口減少を前提としたコンパクトシティ化を進め、過剰インフラを計画的に整理する。</p>
-    </div>
-
-    <p>⑥婚姻制度に基づく優遇の廃止・個人単位化</p>
-    <div class="box">
-      <p>・配偶者控除、遺族年金、相続における配偶者優遇など、婚姻を前提とした制度上の優遇を段階的に廃止する。</p>
-      <p>・税・社会保障の単位を「世帯」から「個人」に切り替え、婚姻の有無によって扱いが変わらない制度に一本化する。</p>
-      <p>・法律婚を出産・育児支援の前提条件とする発想自体を取りやめ、婚姻は純粋に私的な関係の選択として扱う。</p>
-      <p>・婚姻制度の維持・運用（戸籍事務等）にかかる行政コストを、他の行政サービスに再配分する。</p>
-    </div>
-
-    <h2 class="section-title" id="kpi">■ KPI（指標例）</h2>
-    <table class="kpi-table">
-      <tr><th>指標</th><th>目標の方向性</th></tr>
-      <tr><td>労働生産性（一人当たりGDP）</td><td>向上</td></tr>
-      <tr><td>AI・自動化投資額／GDP比</td><td>拡大</td></tr>
-      <tr><td>女性・高齢者の労働参加率</td><td>向上</td></tr>
-      <tr><td>社会保障給付の対GDP比</td><td>抑制</td></tr>
-      <tr><td>婚姻を前提とした制度優遇の残存件数</td><td>縮小</td></tr>
-    </table>
-
-    <hr class="plain">
-
-    <h2 class="section-title" id="hanron">■ 想定される反論</h2>
-    <div class="box">
-      <p>・AI代替が十分に進む前に人口減少・高齢化が先行した場合、移行期に労働力不足が顕在化するリスクがある。</p>
-      <p>・人口減少は労働供給だけでなく、内需・市場規模の縮小にもつながる。</p>
-      <p>・賦課方式からの移行には長期的な移行コストが発生する。</p>
-      <p>・婚姻に紐づく優遇の廃止は、既存の遺族年金受給者や配偶者控除を前提に生活設計してきた世帯に急激な影響を与えうるため、移行期間・経過措置の設計が必要になる。</p>
-    </div>
-
-    <div class="badge-row">
-      <span class="badge">Best Viewed 800x600</span>
-      <span class="badge">相互リンク募集中</span>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    <p>あなたは <span class="counter">001234</span> 人目の訪問者です</p>
-    <p>Copyright(C) 20XX 人口減少対応プラン研究会 All Rights Reserved.<br>
-    本ページは議論のたたき台として公開する個人的な試案です。リンクフリー。</p>
-  </div>
-
-</div>
+  <tr><td class="footer">
+    Copyright (C) おうか三年. All Rights Reserved.
+  </td></tr>
+</table>
 
 </body>
 </html>
