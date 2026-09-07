@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>個人課税の相続税一本化に関する提言</title>
+<style>
+  body {
+    background-color: #1a1200;
+    background-image:
+      repeating-linear-gradient(45deg, #1a1200 0px, #1a1200 40px, #201800 40px, #201800 80px);
+    color: #ffcc33;
+    font-family: "MS Pゴシック", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .outer {
+    width: 760px;
+    margin: 20px auto;
+    background-color: #000000;
+    border: 4px double #ffcc33;
+    padding: 0;
+  }
+
+  .titlebar {
+    background: linear-gradient(180deg, #4d3300, #1a0f00);
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 3px ridge #ffcc33;
+  }
+  .titlebar h1 {
+    color: #ffe066;
+    text-shadow: 2px 2px 0 #660000, -1px -1px 0 #000000;
+    font-size: 22px;
+    margin: 4px 0;
+    letter-spacing: 1px;
+  }
+  .titlebar .sub {
+    color: #dddddd;
+    font-size: 12px;
+  }
+
+  .marquee-wrap {
+    background: #000000;
+    border-top: 1px solid #ffcc33;
+    border-bottom: 1px solid #ffcc33;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4px 0;
+  }
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    color: #ffaa00;
+    font-weight: normal;
+    animation: scroll-left 18s linear infinite;
+  }
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .navbar {
+    background-color: #332200;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .navbar a {
+    color: #ffe066;
+    text-decoration: none;
+    margin: 0 8px;
+    border: 1px outset #997700;
+    padding: 2px 8px;
+    background-color: #4d3300;
+  }
+  .navbar a:hover {
+    background-color: #806000;
+    color: #ffffff;
+  }
+
+  .gold-hr {
+    height: 4px;
+    background: linear-gradient(90deg, #664400, #ffcc33, #664400, #ffcc33, #664400);
+    border: none;
+    margin: 0;
+  }
+
+  .content {
+    background-color: #0d0900;
+    padding: 18px 24px;
+    line-height: 1.8;
+  }
+
+  h2.section-title {
+    background-color: #332200;
+    color: #ffe066;
+    display: inline-block;
+    padding: 2px 12px;
+    font-size: 16px;
+    border: 2px solid #ffcc33;
+    margin-top: 28px;
+  }
+
+  .box {
+    border: 2px solid #886600;
+    background-color: #1a1300;
+    padding: 10px 14px;
+    margin: 14px 0;
+  }
+  .box p { margin: 6px 0; }
+
+  .kpi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .kpi-table th, .kpi-table td {
+    border: 1px solid #ffcc33;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  .kpi-table th {
+    background-color: #4d3300;
+    color: #ffffff;
+  }
+  .kpi-table td {
+    background-color: #1a1300;
+    color: #ffe6a0;
+  }
+
+  .qa-item {
+    margin: 14px 0;
+  }
+  .qa-q {
+    display: block;
+    background-color: #332200;
+    color: #ffe066;
+    border: 1px solid #ffcc33;
+    padding: 6px 12px;
+    font-weight: bold;
+  }
+  .qa-a {
+    display: block;
+    background-color: #1a1300;
+    color: #ffe6a0;
+    border-left: 3px solid #ffcc33;
+    padding: 8px 14px;
+    margin-top: 4px;
+  }
+
+  .badge-row {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+  }
+  .badge {
+    display: inline-block;
+    background-color: #dddddd;
+    color: #000000;
+    border: 1px solid #666666;
+    font-size: 11px;
+    padding: 3px 7px;
+    margin: 3px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #997700;
+    padding: 14px 0;
+    border-top: 1px solid #4d3300;
+  }
+
+  .counter {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffcc33;
+    font-family: "Courier New", monospace;
+    letter-spacing: 3px;
+    padding: 3px 8px;
+    border: 1px inset #888888;
+  }
+
+  hr.plain {
+    border: none;
+    border-top: 1px dotted #886600;
+    margin: 20px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="outer">
+
+  <div class="titlebar">
+    <h1>個人課税の相続税一本化に関する提言</h1>
+    <div class="sub">生存中は無税、死亡時点で生涯資産を一括精算する税制への転換試案</div>
+  </div>
+
+  <div class="marquee-wrap">
+    <span class="marquee-text">お知らせ：本ページは税制の議論のたたき台として作成した個人による試案です。所属組織の公式見解ではありません。</span>
+  </div>
+
+  <div class="navbar">
+    <a href="#ninshiki">現状認識</a>
+    <a href="#housin">基本方針</a>
+    <a href="#shisaku">施策の柱</a>
+    <a href="#kpi">KPI</a>
+    <a href="#hanron">Ｑ＆Ａ</a>
+  </div>
+
+  <hr class="gold-hr">
+
+  <div class="content">
+
+    <p>現行の個人課税は、所得税・住民税・消費税・社会保険料等、生涯にわたり「稼ぐ」「使う」「増やす」という経済活動の局面ごとに幾重にも課税する「都度課税方式」を採っている。
+    これに対し相続税は、生涯で形成された資産のうち、実際に使い切られず死亡時点で残った部分にのみ課税されるという性質を持つ。
+    本提言は、生存中の経済活動に対する個人課税を撤廃し、生涯を通じて形成・保有された純資産を死亡時点で一括して精算課税する「相続税」に一本化することで、
+    ヒト・モノ・カネが生存中は課税を意識せず自由に循環する社会を目指すものである。</p>
+
+    <h2 class="section-title" id="ninshiki">■ 現状認識</h2>
+    <div class="box">
+      <p>・都度課税方式は、稼ぐこと・使うこと・増やすことのそれぞれに税負担と申告コストという摩擦を生じさせ、労働意欲・消費・投資を委縮させている。</p>
+      <p>・相続税は生涯資産のうち「使われず残った部分」にのみ課税される点で、経済活動そのものを阻害しない性質を持つ。</p>
+      <p>・現行制度下でも、資産の多くは生前贈与や資産の組み替え等により実効的な相続税負担を軽減されており、都度課税と一括課税が併存する現状は税制の複雑化と徴税コストの増大を招いている。</p>
+    </div>
+
+    <h2 class="section-title" id="housin">■ 基本方針</h2>
+    <div class="box">
+      <p>①生存中の経済活動（稼ぐ・使う・増やす）に対する個人課税を原則として撤廃し、税負担をゼロに近づける。</p>
+      <p>②生涯を通じて形成・保有された個人の純資産を、死亡時点で一括して精算課税する「相続税」に一本化する。</p>
+      <p>③生前贈与は相続税の前払いとして扱い、名義変更等による課税逃れを防止する。</p>
+      <p>④法人課税・資産保有課税は個人課税撤廃による税収減少分を補完する制度として別途維持する。</p>
+    </div>
+
+    <h2 class="section-title" id="shisaku">■ 施策の柱</h2>
+
+    <p>①個人所得課税・個人消費課税を段階的に撤廃する</p>
+    <div class="box">
+      <p>・給与所得・事業所得・金融所得等に対する所得税・住民税を撤廃する。</p>
+      <p>・個人の消費行為そのものに対する課税を縮小・撤廃し、法人の取引段階における付加価値課税に代替させる。</p>
+    </div>
+
+    <p>②相続税を「生涯資産精算税」として再設計する</p>
+    <div class="box">
+      <p>・課税対象を死亡時点の全世界純資産（現金・有価証券・不動産・事業資産等）に拡大する。</p>
+      <p>・都度課税で担っていた再分配機能を死亡時点に集約し、単一の累進税率表を適用する。</p>
+    </div>
+
+    <p>③生前贈与・海外移転への対応</p>
+    <div class="box">
+      <p>・暦年贈与制度を廃止し、生前贈与を生涯累積課税方式のもとで相続税の前払いとして扱う。</p>
+      <p>・国外転出時のみなし相続課税を強化し、海外移住による課税逃れを防止する。</p>
+    </div>
+
+    <p>④若年死亡・資産未形成者への配慮</p>
+    <div class="box">
+      <p>・基礎控除を大幅に引き上げ、資産形成が途上の者（若年死亡等）への課税を実質的に免除する。</p>
+      <p>・配偶者・未成年の子等、遺族の生活保障に必要な一定額を非課税枠として確保する。</p>
+    </div>
+
+    <p>⑤法人課税・資産保有課税による財源補完</p>
+    <div class="box">
+      <p>・個人所得課税撤廃による税収減少分は、法人課税の適正化および固定資産税等の資産保有課税の見直しにより補完する。</p>
+    </div>
+
+    <p>⑥資産価値の随時把握のための市場評価基盤整備</p>
+    <div class="box">
+      <p>・不動産・美術品・非上場株式等、時価が定まりにくい資産については、NFT化した上でNFT市場に流通させ、随時の市場取引価格を評価額として把握できる仕組みを整備する。</p>
+      <p>・相続税評価額は、死亡時点に最も近いNFT市場での取引・気配値を基準とすることで、恣意的な低評価による課税逃れを防止する。</p>
+      <p>・当該市場基盤は、転売庁が推進する資産流通施策とも連携し、資産の流動化・評価の適正化を横断的に進める。</p>
+    </div>
+
+    <h2 class="section-title" id="kpi">■ KPI（指標例）</h2>
+    <table class="kpi-table">
+      <tr><th>指標</th><th>目標の方向性</th></tr>
+      <tr><td>個人の労働参加率・投資額</td><td>向上</td></tr>
+      <tr><td>生前贈与の把握率</td><td>向上</td></tr>
+      <tr><td>相続税収／死亡者数あたり平均課税額</td><td>増加</td></tr>
+      <tr><td>税制の申告・徴税コスト（対GDP比）</td><td>縮小</td></tr>
+      <tr><td>海外移住による資産流出額</td><td>抑制</td></tr>
+      <tr><td>NFT市場を通じた資産評価カバー率</td><td>拡大</td></tr>
+    </table>
+
+    <hr class="plain">
+
+    <h2 class="section-title" id="hanron">■ Ｑ＆Ａ</h2>
+
+    <div class="qa-item">
+      <span class="qa-q">Ｑ．生存中は無税となるが、超富裕層は運用益を非課税のまま複利で拡大させ続け、死亡まで格差が固定・拡大するのではないか？</span>
+      <span class="qa-a">その懸念は残る。相続税率の累進度をどこまで高めるかという設計上の課題として、引き続き検討が必要である。</span>
+    </div>
+
+    <div class="qa-item">
+      <span class="qa-q">Ｑ．死亡時期は本人が選べないが、負担が不公平にならないか？</span>
+      <span class="qa-a">若くして死亡した者と長寿を全うした者との間で実質的な生涯負担に大きな差が生じうる。基礎控除や非課税枠で一定程度は緩和できるが、根本的な不公平感を完全には解消できない可能性がある。</span>
+    </div>
+
+    <div class="qa-item">
+      <span class="qa-q">Ｑ．相続税に一本化すると、海外移住や資産の海外移転が加速するのではないか？</span>
+      <span class="qa-a">相続税一本化に伴い税率を大幅に引き上げる必要があり、税率次第では駆け込みでの海外移住や資産の海外移転を加速させるリスクがある。国外転出時のみなし相続課税の強化等、対応策の検討が必要である。</span>
+    </div>
+
+    <div class="qa-item">
+      <span class="qa-q">Ｑ．個人消費課税を撤廃して、税収は本当に大丈夫なのか？</span>
+      <span class="qa-a">法人取引段階への課税移行が不完全な場合、税収基盤を不安定にする恐れがある。移行設計の精度が制度の成否を左右する。</span>
+    </div>
+
+    <div class="qa-item">
+      <span class="qa-q">Ｑ．生前贈与を含めた生涯累積課税は、どうやって把握するのか？</span>
+      <span class="qa-a">資産の継続的なマイナンバー等による捕捉体制の構築が前提となり、実務上のコストが大きい。</span>
+    </div>
+
+    <div class="qa-item">
+      <span class="qa-q">Ｑ．不動産や美術品、非上場株式など、時価がわかりにくい資産はどう評価するのか？</span>
+      <span class="qa-a">当該資産をNFT化し、NFT市場に出品することで、随時の市場取引を通じた評価額を把握できるようにする。相続税評価額は、死亡時点に最も近いNFT市場での取引・気配値を基準とすることで、恣意的な低評価による課税逃れを防止する。</span>
+    </div>
+
+    <div class="badge-row">
+      <span class="badge">Best Viewed 800x600</span>
+      <span class="badge">相互リンク募集中</span>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>あなたは <span class="counter">005678</span> 人目の訪問者です</p>
+    <p>Copyright(C) 20XX 税制一本化研究会 All Rights Reserved.<br>
+    本ページは議論のたたき台として公開する個人的な試案です。リンクフリー。</p>
+  </div>
+
+</div>
+
+</body>
+</html>
