@@ -4,112 +4,162 @@
 <meta charset="UTF-8">
 <title>桜花三年　政策提言</title>
 <style>
+  * {
+    box-sizing: border-box;
+  }
   body {
-    background-color: #d9d9d9;
-    background-image: url("data:image/gif;base64,R0lGODlhCAAIAIAAAMzMzP///yH5BAAAAAAALAAAAAAIAAgAAAINhI+py+0Po5y02otnAQA7");
-    font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    color: #000080;
+    background-color: #ffffff;
+    font-family: "Yu Mincho", "游明朝", "MS Mincho", "ＭＳ 明朝", serif;
+    color: #1a1a1a;
     margin: 0;
     padding: 0;
+    line-height: 1.9;
   }
-  table.outer {
-    width: 760px;
-    margin: 10px auto;
-    background-color: #ffffff;
-    border: 3px double #000080;
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
   }
-  td.header {
-    background-color: #000080;
-    color: #ffff00;
-    text-align: center;
-    padding: 8px;
+  .masthead {
+    border-bottom: 3px solid #1a1a1a;
+    padding: 28px 0 14px;
+    margin-bottom: 0;
   }
-  td.header h1 {
-    margin: 0;
-    font-size: 22px;
-    letter-spacing: 2px;
-  }
-  td.header .sub {
-    color: #ffffff;
+  .masthead .agency {
     font-size: 12px;
+    letter-spacing: 0.15em;
+    color: #444444;
+    margin-bottom: 10px;
   }
-  td.content {
-    padding: 14px 20px;
-    font-size: 14px;
-    line-height: 1.8;
+  .masthead h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+  }
+  .masthead .sub {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #444444;
+  }
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555555;
+    border-bottom: 1px solid #999999;
+    padding: 6px 0 8px;
+    margin-bottom: 30px;
   }
   h2.section {
-    background-color: #000080;
-    color: #ffffff;
-    padding: 3px 8px;
-    font-size: 15px;
-    margin-top: 25px;
-    margin-bottom: 8px;
-  }
-  ul.pagelist {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  ul.pagelist li {
-    border: 1px solid #000080;
-    background-color: #eef0ff;
-    margin-bottom: 10px;
-    padding: 10px 14px;
-  }
-  ul.pagelist a {
-    color: #0000ff;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  ul.pagelist a:visited {
-    color: #800080;
-  }
-  ul.pagelist .desc {
-    display: block;
-    font-size: 12px;
-    color: #333333;
-    margin-top: 4px;
+    font-size: 16px;
     font-weight: normal;
+    letter-spacing: 0.08em;
+    border-left: 4px solid #1a1a1a;
+    padding-left: 10px;
+    margin-top: 36px;
+    margin-bottom: 16px;
   }
-  td.footer {
-    background-color: #000080;
-    color: #ffffff;
+  table.doclist {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  table.doclist th,
+  table.doclist td {
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    padding: 12px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  table.doclist th {
+    width: 110px;
+    font-weight: normal;
+    color: #444444;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  table.doclist tbody tr + tr th,
+  table.doclist tbody tr + tr td {
+    border-top: none;
+  }
+  table.doclist a {
+    color: #1a1a1a;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  table.doclist a:hover {
+    color: #555555;
+    border-bottom-color: #555555;
+  }
+  table.doclist .desc {
+    display: block;
+    font-size: 12.5px;
+    color: #555555;
+    margin-top: 6px;
+  }
+  .notice {
+    margin-top: 40px;
+    padding: 14px 16px;
+    border: 1px solid #999999;
+    font-size: 12.5px;
+    color: #444444;
+  }
+  .footer {
+    margin-top: 50px;
+    border-top: 1px solid #999999;
+    padding-top: 14px;
+    font-size: 11.5px;
+    color: #666666;
     text-align: center;
-    font-size: 11px;
-    padding: 8px;
   }
 </style>
 </head>
 <body>
 
-<table class="outer" cellspacing="0" cellpadding="0">
-  <tr><td class="header">
+<div class="page">
+
+  <div class="masthead">
+    <div class="agency">桜花三年　政策資料集</div>
     <h1>桜花三年　政策提言</h1>
-    <div class="sub">こちらから各ページをご覧いただけます</div>
-  </td></tr>
+    <div class="sub">各種提言・資料は下記索引よりご覧いただけます。</div>
+  </div>
 
-  <tr><td class="content">
+  <div class="meta-bar">
+    <span>索引番号：桜花三年　資料一覧</span>
+    <span>最終更新：桜花三年</span>
+  </div>
 
-    <h2 class="section">■ 公開中のページ</h2>
-    <ul class="pagelist">
-      <li>
+  <h2 class="section">一　公開資料</h2>
+  <table class="doclist">
+    <tr>
+      <th>資料一</th>
+      <td>
         <a href="tenbaicho.html">転売庁　公式ホームページ｜転売立国推進特別委員会</a>
         <span class="desc">「転売立国」の実現に向けた基本方針等を掲載する架空の風刺サイトです。</span>
-      </li>
-      <li>
+      </td>
+    </tr>
+    <tr>
+      <th>資料二</th>
+      <td>
         <a href="shoushika-teigen.html">人口減少対応・労働市場再設計に関する提言</a>
         <span class="desc">生成AI・自動化の進展を前提とした人口政策の見直し試案です。</span>
-      </li>
-    </ul>
+      </td>
+    </tr>
+  </table>
 
-  </td></tr>
+  <div class="notice">
+    ※ 本サイトに掲載する資料は、いずれも架空の団体・委員会等による風刺・創作を目的としたものであり、
+    実在の行政機関の見解・方針を示すものではありません。
+  </div>
 
-  <tr><td class="footer">
+  <div class="footer">
     Copyright (C) 桜花三年. All Rights Reserved.
-  </td></tr>
-</table>
+  </div>
+
+</div>
 
 </body>
 </html>
