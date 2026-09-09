@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>人工出生・養育一貫センター構想に関する提言</title>
+<style>
+  body {
+    background-color: #000033;
+    background-image:
+      repeating-linear-gradient(45deg, #000033 0px, #000033 40px, #000044 40px, #000044 80px);
+    color: #00ff00;
+    font-family: "MS Pゴシック", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .outer {
+    width: 760px;
+    margin: 20px auto;
+    background-color: #000000;
+    border: 4px double #ffff00;
+    padding: 0;
+  }
+
+  .titlebar {
+    background: linear-gradient(180deg, #ff00ff, #6600cc);
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 3px ridge #00ffff;
+  }
+  .titlebar h1 {
+    color: #ffff00;
+    text-shadow: 2px 2px 0 #ff0000, -1px -1px 0 #00ffff;
+    font-size: 22px;
+    margin: 4px 0;
+    letter-spacing: 1px;
+  }
+  .titlebar .sub {
+    color: #ffffff;
+    font-size: 12px;
+  }
+
+  .marquee-wrap {
+    background: #000000;
+    border-top: 1px solid #ffff00;
+    border-bottom: 1px solid #ffff00;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4px 0;
+  }
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    color: #99ff99;
+    font-weight: normal;
+    animation: scroll-left 16s linear infinite;
+  }
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .navbar {
+    background-color: #222266;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .navbar a {
+    color: #ffff66;
+    text-decoration: none;
+    margin: 0 8px;
+    border: 1px outset #9999ff;
+    padding: 2px 8px;
+    background-color: #333399;
+  }
+  .navbar a:hover {
+    background-color: #5555cc;
+    color: #ffffff;
+  }
+
+  .rainbow-hr {
+    height: 4px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    border: none;
+    margin: 0;
+  }
+
+  .content {
+    background-color: #000011;
+    padding: 18px 24px;
+    line-height: 1.8;
+  }
+
+  h2.section-title {
+    background-color: #003300;
+    color: #ffffff;
+    display: inline-block;
+    padding: 2px 12px;
+    font-size: 16px;
+    border: 2px solid #00cc00;
+    margin-top: 28px;
+  }
+
+  .box {
+    border: 2px solid #336699;
+    background-color: #001122;
+    padding: 10px 14px;
+    margin: 14px 0;
+  }
+  .box p { margin: 6px 0; }
+
+  .kpi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .kpi-table th, .kpi-table td {
+    border: 1px solid #00ff00;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  .kpi-table th {
+    background-color: #004400;
+    color: #ffffff;
+  }
+  .kpi-table td {
+    background-color: #001a00;
+    color: #ccffcc;
+  }
+
+  .badge-row {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+  }
+  .badge {
+    display: inline-block;
+    background-color: #dddddd;
+    color: #000000;
+    border: 1px solid #666666;
+    font-size: 11px;
+    padding: 3px 7px;
+    margin: 3px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #6699cc;
+    padding: 14px 0;
+    border-top: 1px solid #444488;
+  }
+
+  .counter {
+    display: inline-block;
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    letter-spacing: 3px;
+    padding: 3px 8px;
+    border: 1px inset #888888;
+  }
+
+  hr.plain {
+    border: none;
+    border-top: 1px dotted #4444aa;
+    margin: 20px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="outer">
+
+  <div class="titlebar">
+    <h1>人工出生・養育一貫センター構想に関する提言</h1>
+    <div class="sub">「家族」という単位に依存しない出生・養育インフラの設計試案</div>
+  </div>
+
+  <div class="marquee-wrap">
+    <span class="marquee-text">お知らせ：本ページは政策の議論のたたき台として作成した個人による試案です。所属組織の公式見解ではありません。</span>
+  </div>
+
+  <div class="navbar">
+    <a href="#ninshiki">現状認識</a>
+    <a href="#housin">基本方針</a>
+    <a href="#shisaku">施策の柱</a>
+    <a href="#kpi">KPI</a>
+    <a href="#hanron">想定される反論</a>
+  </div>
+
+  <hr class="rainbow-hr">
+
+  <div class="content">
+
+    <p>子を家庭から引き離す形での脱家族化には、当人にとっての喪失感という無視できない負の側面がある。
+    本提言は、この問題を「引き離し」ではなく「そもそも家族に属さない生まれ方」によって回避する立場をとる。
+    受精から出生までを施設内で完結させ、出生の時点から養育機関が一貫して担うことで、
+    家庭という中間的な単位を経由しない出生・養育の経路を制度化することを目的とする。</p>
+
+    <h2 class="section-title" id="ninshiki">■ 現状認識</h2>
+    <div class="box">
+      <p>・養育を家庭から公的機関へ移管する制度設計は、既に生まれ育った子を親から引き離す形をとる限り、心理的負荷という代償を伴う。</p>
+      <p>・妊娠・出産は特定の個人（主に女性）の身体的負担に依存しており、養育インフラの計画的整備を妨げる律速要因となっている。</p>
+      <p>・人工子宮（体外妊娠）技術は研究段階にあるが、実用化された場合、出生の過程を身体的負担・特定個人への依存から切り離せる可能性がある。</p>
+      <p>・出生と養育の担い手を制度上分離しておけば、「引き離す」という工程自体が発生しない設計が可能になる。</p>
+    </div>
+
+    <h2 class="section-title" id="housin">■ 基本方針</h2>
+    <div class="box">
+      <p>①妊娠・出産を家庭・個人の身体的負担から切り離し、専用施設に集約する。</p>
+      <p>②遺伝的な提供行為と、養育という行為を制度上明確に分離する。</p>
+      <p>③出生の瞬間から養育機関が一貫して担い、家庭という中間的な単位を経由させない。</p>
+    </div>
+
+    <h2 class="section-title" id="shisaku">■ 施策の柱</h2>
+
+    <p>①人工子宮（体外妊娠）技術の国家主導での研究・実用化</p>
+    <div class="box">
+      <p>・受精から出生までを施設内で完結させる技術の研究開発を国家プロジェクトとして推進する。</p>
+      <p>・実用化の暁には、専用の出生施設（中央育成センター、仮称）に妊娠・出産の機能を集約する。</p>
+    </div>
+
+    <p>②遺伝的提供と養育の完全分離</p>
+    <div class="box">
+      <p>・卵子・精子は匿名の登録ドナーバンクを通じて提供を受け、提供者と出生する子との間に法的な親子関係を発生させない。</p>
+      <p>・提供は養育の権利・義務を一切伴わない、純粋な遺伝資源の提供として位置づける。</p>
+    </div>
+
+    <p>③出生から養育までの一貫施設化</p>
+    <div class="box">
+      <p>・出生後は直接、認定養育機関が引き継ぎ、乳児期から一貫した専門養育を行う。</p>
+      <p>・家庭という中間ステップを制度上経由しないため、養育者の変更に伴う「引き離し」は発生しない。</p>
+    </div>
+
+    <p>④遺伝資源提供へのインセンティブ制度</p>
+    <div class="box">
+      <p>・卵子・精子提供者への対価制度を整備し、遺伝資源の安定供給を確保する。</p>
+      <p>・提供者の医学的適性・希望に応じた登録制度を設け、需給を調整する。</p>
+    </div>
+
+    <p>⑤出生数の計画的コントロール</p>
+    <div class="box">
+      <p>・人口政策の一環として、養育インフラの受入能力・労働需要に応じた出生数を計画的に調整する。</p>
+      <p>・出生率という自然現象への働きかけではなく、供給計画としての人口管理に位置づけを改める。</p>
+    </div>
+
+    <h2 class="section-title" id="kpi">■ KPI（指標例）</h2>
+    <table class="kpi-table">
+      <tr><th>指標</th><th>目標の方向性</th></tr>
+      <tr><td>人工子宮技術による出生比率</td><td>拡大</td></tr>
+      <tr><td>出生時点での養育機関への移行率</td><td>100%に近づける</td></tr>
+      <tr><td>ドナーバンク登録者数</td><td>拡大</td></tr>
+      <tr><td>養育機関の定員充足率</td><td>需給均衡を維持</td></tr>
+      <tr><td>妊娠・出産に伴う個人の身体的負担（時間・件数）</td><td>縮小</td></tr>
+    </table>
+
+    <hr class="plain">
+
+    <h2 class="section-title" id="hanron">■ 想定される反論</h2>
+    <div class="box">
+      <p>・人工子宮技術は現時点で実用化に至っておらず、本提言の中核施策は技術的な実現可能性に大きく依存する。</p>
+      <p>・遺伝的な出自を知る権利、出自を巡るアイデンティティの問題など、当人にとっての心理的影響は「引き離し」とは別の形で残る可能性がある。</p>
+      <p>・遺伝資源提供へのインセンティブ制度は、提供の対価性を巡る倫理的な論点を伴う。</p>
+      <p>・移行期においては、既存の家族制度を前提に生活設計してきた世帯との整合性をどう取るかが課題となる。</p>
+    </div>
+
+    <div class="badge-row">
+      <span class="badge">Best Viewed 800x600</span>
+      <span class="badge">相互リンク募集中</span>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>あなたは <span class="counter">000512</span> 人目の訪問者です</p>
+    <p>Copyright(C) 20XX 人口減少対応プラン研究会 All Rights Reserved.<br>
+    本ページは議論のたたき台として公開する個人的な試案です。リンクフリー。</p>
+  </div>
+
+</div>
+
+</body>
+</html>
