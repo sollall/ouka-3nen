@@ -1,0 +1,49 @@
+body {
+  background-color: #d9d9d9;
+  background-image: url("data:image/gif;base64,R0lGODlhCAAIAIAAAMzMzP///yH5BAAAAAAALAAAAAAIAAgAAAINhI+py+0Po5y02otnAQA7");
+  font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #000080;
+  margin: 0;
+  padding: 0;
+}
+table.outer {
+  width: 760px;
+  margin: 10px auto;
+  background-color: #ffffff;
+  border: 3px double #000080;
+}
+td.header {
+  background-color: #000080;
+  color: #ffff00;
+  text-align: center;
+  padding: 8px;
+}
+td.header h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+td.header .sub {
+  color: #ffffff;
+  font-size: 12px;
+}
+td.content {
+  padding: 14px 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+h2.section {
+  background-color: #000080;
+  color: #ffffff;
+  padding: 3px 8px;
+  font-size: 15px;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+td.footer {
+  background-color: #000080;
+  color: #ffffff;
+  text-align: center;
+  font-size: 11px;
+  padding: 8px;
+}
